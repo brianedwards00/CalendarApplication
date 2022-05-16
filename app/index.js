@@ -98,6 +98,16 @@ function initBtns() {
     document.getElementById('btnDelete').addEventListener('click', deleteEvent)
 
     document.getElementById('btnClose').addEventListener('click', removeBackDrop)
+
+    document.getElementById('theme').addEventListener('click', function(event){
+        if (event.target.value === "Gray") {
+            document.getElementById("css").href = "gray.css"
+            localStorage.setItem('theme', JSON.stringify({color:"gray"}))
+        } else if (event.target.value === "Peach") {
+            document.getElementById("css").href = "peach.css"
+            localStorage.setItem('theme', JSON.stringify({color:"peach"}))
+        }
+    })
 }
 
 function displayAddEvent(date) {

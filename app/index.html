@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Calendar App</title>
-        <link rel="stylesheet" href="style.css">
+        <link id="css" rel="stylesheet" href="gray.css">
     </head>
     <body>
         
@@ -28,6 +28,11 @@
                 <div>Saturday</div>
             </div>
             <div id="calendar"></div>
+            <select id="theme">
+                <option>Theme</option>
+                <option>Gray</option>
+                <option>Peach</option>
+            </select>
         </div>
 
         <div id="newEvent">
@@ -65,5 +70,16 @@
 
         <div id="backDrop"></div>
         <script src="./index.js"></script>
+        <script>
+            let theme = localStorage.getItem('theme')
+            console.log(theme)
+            if (theme === null){
+                document.getElementById("css").href = "gray.css"
+            } else if (theme === '{"color":"peach"}') {
+                document.getElementById("css").href = "peach.css"
+            } else if (theme === '{"color":"gray"}') {
+                document.getElementById("css").href = "gray.css"
+            }
+        </script>
     </body>
 </html>

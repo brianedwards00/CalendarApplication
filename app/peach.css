@@ -1,8 +1,11 @@
 body {
+    height: 100%;
+    margin: 0;
     display: flex;
     justify-content: center;
-    background-color: #b6b6b68e;
-    padding: 10px;
+    background: rgb(241, 116, 156);
+    background: radial-gradient(circle, rgba(241, 116, 156, 1) 19%, rgba(240, 227, 227, 1) 80%);
+    padding: 100px;
   }
   button {
     width: 100px;
@@ -14,26 +17,30 @@ body {
     border-radius: 5px;
     color: white;
   }
-  
+
   #header {
     padding: 10px;
-    color: rgb(92, 0, 0);
-    font-size: 30px;
-    font-family: serif;
+    color:rgb(247, 133, 133);
+    font-size: 65px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
   }
   #header button {
-    background-color:rgb(92, 0, 0);
+    background-color:rgb(247, 133, 133);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
   }
   #calContainer {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     width: 770px;
   }
   #days {
     width: 100%;
     display: flex;
-    color: #2581a8;
+    font-weight: semi-bold;
+    color: rgb(255, 255, 255);
   }
   #days div {
     width: 100px;
@@ -44,6 +51,7 @@ body {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+
   }
   .day {
     width: 100px;
@@ -51,29 +59,36 @@ body {
     height: 100px;
     cursor: pointer;
     box-sizing: border-box;
-    background-color: white;
     margin: 3px;
-    border: #6e6e6e;
     border-style: solid;
     border-width: 2px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: auto;
+    background-color: #ffffff;
+    border: none;
+    opacity: 0.8;
   }
+
   .day:hover {
-    background-color: #d6ffe3;
+    background-color: rgb(249, 176, 176);
+    opacity: 1;
   }
-  
+
   .day + #currentDay {
-    background-color:#daf3ff;
+    background-color: rgb(247, 133, 133);
+    opacity: 1.0;
+
   }
   .event {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 10px;
     padding: 3px;
     color: white;
     border-radius: 5px;
     max-height: 55px;
+    overflow: hidden;
     transition: background-color 250ms linear;
   }
   .event:hover {
@@ -84,27 +99,33 @@ body {
     display: none;
     z-index: 20;
     padding: 25px;
-    background-color: #e8f4fa;
-    box-shadow: 0px 0px 3px black;
+    background-color: #ffffff;
     border-radius: 5px;
     width: 350px;
     top: 100px;
     left: calc(50% - 175px);
     position: absolute;
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    color: #000000;
+    font-size: 18px;
   }
+
   #eventInput,#eventStart,#eventEnd, #eventDesc {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 25px;
     border-radius: 3px;
+    color: rgb(247, 133, 133);
+    font-size: 18px;
   }
   #btnCancel, #btnDelete {
-    background-color: #800000;
+    background-color: #a73333;
   }
   #btnSave, #btnClose {
-    background-color: #2f60ff;
+    background-color: #6484ea;
   }
   #eventText {
     font-size: 20px;
@@ -139,15 +160,9 @@ body {
     font-weight: bold
   }
 
-  ::-webkit-scrollbar {
-    width: 5px;
-  }
-  ::-webkit-scrollbar-track {
-    background: #919191;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #000000;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+
+#theme {
+    float: right;
+    width: 75px;
+    color: rgb(247, 133, 133);
   }
