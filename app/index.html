@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calendar App</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <div id="calContainer">
+            <div id="header">
+                <div id="monthName"></div>
+                <div>
+                    <button id="btnPrevious">Previous</button>
+                    <button id="btnNext">Next</button>
+                </div>
+            </div>
+
+            <div id="days">
+                <div>Sunday</div>
+                <div>Monday</div>
+                <div>Tuesday</div>
+                <div>Wednesday</div>
+                <div>Thursday</div>
+                <div>Friday</div>
+                <div>Saturday</div>
+            </div>
+            <div id="calendar"></div>
+        </div>
+
+        <div id="newEvent">
+            <h3>Add New Event</h3>
+            <div>Event Title</div>
+            <input id="eventInput" type="text"/>
+            <br/> <br/>
+            <div>Start Time</div>
+            <input id="eventStart" type="time" placeholder="Start Time" />
+            <br/> <br/>
+            <div>End Time</div>
+            <input id="eventEnd" type="time" placeholder="End Time" />
+            <br/> <br/>
+            <div>Description (Optional)</div>
+            <input id="eventDesc" type="text" />
+            <br/> <br/>
+            <div>Event Color</div>
+            <input id="eventColor" type="color"/>
+            <br/> <br/>
+            <button id="btnSave">Save</button>
+            <button id="btnCancel">Cancel</button>
+        </div>
+
+        <div id="deleteEvent">
+            <p id="eventText"></p>
+            <label id="eventS"></label>
+            <label>-</label>
+            <label id="eventE"></label>
+            <br/><br/>
+            <label id="eventD"></label>
+            <br/><br/>
+            <button id="btnDelete">Delete</button>
+            <button id="btnClose">Close</button>
+        </div>
+
+        <div id="backDrop"></div>
+        <script src="./index.js"></script>
+    </body>
+</html>
